@@ -1,0 +1,74 @@
+html {
+    font-size: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    height: 100vh;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 15px;
+    background-color: red;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+
+/* COLORS */
+
+:root {
+    --body-color: #cbcdd4;
+    --body-inset-color: #dbdde2;
+    --display-color: #4deca0;
+    --display-color-op2: #d1e7ac;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    font-family: 'Caveat Brush', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+}
+
+header p {
+    color: whitesmoke;
+    font-size: 24px;
+}
+
+/* LOGO */
+
+#burgerLogo {
+    max-width: 100%;
+    animation: pulseBurger 3s infinite;
+}
+
+@keyframes pulseBurger {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
