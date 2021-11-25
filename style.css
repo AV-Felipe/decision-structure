@@ -17,7 +17,7 @@ body {
     min-width: 300px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /*align-items: center;*/
     flex-wrap: wrap;
     column-gap: 15px;
     row-gap: 15px;
@@ -49,26 +49,43 @@ header {
     row-gap: 15px;
 }
 
-header p {
+#startButton {
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
     color: whitesmoke;
-    font-size: 24px;
+    font-size: 32px;
 }
+
 
 /* LOGO */
 
 #burgerLogo {
     max-width: 100%;
-    animation: pulseBurger 3s infinite;
+    background-image: url(assets/images/hamburger-04-icon.png);
+}
+
+.animation-01 {
+    animation: pulseBurger 2s infinite;
 }
 
 @keyframes pulseBurger {
     0% {
-        transform: scale(0.9);
+        transform: scale(0.95);
     }
     50% {
         transform: scale(1);
     }
     100% {
-        transform: scale(0.9);
+        transform: scale(0.95);
     }
+}
+
+.animation-02 {
+    animation: goToTop 3s forwards;
+}
+
+@keyframes goToTop {
+    0% {max-width: 100%;}
+    100% {max-width: 20%;}
 }
