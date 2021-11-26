@@ -13,6 +13,7 @@ ul {
 }
 
 body {
+    margin: 10px;
     height: 100vh;
     min-width: 300px;
     display: flex;
@@ -61,7 +62,7 @@ header {
     background-color: transparent;
     border: none;
     font-family: inherit;
-    color: whitesmoke;
+    color: var(--main-text-color);
     font-size: 32px;
 }
 
@@ -104,6 +105,7 @@ header {
 #navigationMenu {
     display: flex;
     justify-content: space-around;
+    margin: 10px;
 }
 
 #navigationMenu button {
@@ -125,6 +127,30 @@ header {
     width: 48px;
     padding: 5px;
     border-radius: 8px;
-    background-color: whitesmoke;
+    background-color: var(--main-text-color);
     
+}
+
+/* ENd PAGE */
+
+#bill {
+    padding: 20px;
+    padding-bottom: 40px;
+    border-bottom: 3px dashed var(--main-text-color);
+}
+
+#cheffOrder {
+    margin-top: 35px;
+    padding: 5px;
+    border: 1px solid var(--main-text-color);
+}
+
+#cheffOrder dt{
+    font-weight: bold;
+
+}
+
+#cheffOrder dd{
+    padding-left: 40px;
+    margin-bottom: 10px;
 }

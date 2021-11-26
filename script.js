@@ -8,6 +8,7 @@ const nextButton = document.getElementById('nextScreen');
 
 //control variables
 let pageIndex = 0;
+let totalOrderValue = 0;
 
 //arrays
 
@@ -228,6 +229,8 @@ function pageLoader(index) {
             let saladChoice = document.querySelector('input[name="salad"]:checked').value;
             let cheeseChoice = document.querySelector('input[name="cheese"]:checked').value;
 
+            totalOrderValue = 0;
+
             switch(breadChoice) {
                 case'a':
                     bread = ['pão francês', 3];
@@ -284,5 +287,56 @@ function pageLoader(index) {
 
             console.log(myHamburger);
             
+            myHamburger.forEach(item => totalOrderValue += item[1]);
+            
+
+            //load last page
+            mainSection.innerHTML = `
+                <p id="bill">
+                    Total a pagar: R$<span id="totalValue">${totalOrderValue.toString()}</span>
+                </p>
+                
+                <dl id="cheffOrder">
+                    <dt>
+                        Pão:
+                    </dt>
+                    <dd>
+                        <span id="bread">${myHamburger[0][0]}</span>
+                    </dd>
+
+                    <dt>
+                        Proteína:
+                    </dt>
+                    <dd>
+                        <span id="protein">${myHamburger[1][0]}</span>
+                    </dd>
+
+                    <dt>
+                        Salada:
+                    </dt>
+                    <dd>
+                        <span id="salad">${myHamburger[2][0]}</span>
+                    </dd>
+
+                    <dt>
+                        Queijo:
+                    </dt>
+                    <dd>
+                        <span id="cheese">${myHamburger[3][0]}</span>
+                    </dd>
+
+                </dl>
+                
+                <nav id="navigationMenu">
+                    <button
+                    id="nextScreen"
+                    type="button"
+                    onclick="previousPage()"
+                    >voltar
+                    </button>
+                </nav>
+            `;
+
+            break;
     }
 }
