@@ -21,6 +21,7 @@ let myHamburger = [];
 //landing page
 
 mainTitle.addEventListener('click', startPage);
+burgerLogo.addEventListener('click', startPage);
 
 function startPage() {
     console.log(burgerLogo.offsetWidth);
@@ -46,7 +47,8 @@ function startPage() {
         `;
     }
 
-    mainTitle.removeEventListener('click', nextPage);
+    mainTitle.removeEventListener('click', startPage);
+    burgerLogo.removeEventListener('click', startPage);
 }
 
 
@@ -220,6 +222,8 @@ function pageLoader(index) {
                     </button>
                 </nav>
                 `;
+
+                mainTitle.innerHTML = `Monte seu hambúrguer`;
                 break;
 
         //prepare order
@@ -336,6 +340,8 @@ function pageLoader(index) {
                     </button>
                 </nav>
             `;
+
+            mainTitle.innerHTML = `Ótima escolha!`;
 
             break;
     }
