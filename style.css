@@ -19,7 +19,6 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    /*align-items: center;*/
     column-gap: 15px;
     row-gap: 15px;
     background-color: red;
@@ -27,23 +26,31 @@ body {
     background-attachment: fixed;
 }
 
+main {
+    font-family: var(--main-font-family);
+    font-size: 22px;
+    color: var(--main-text-color);
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
 /* FONTS */
 
-@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Roboto+Slab&display=swap');
 
 /* COLORS */
 
 :root {
-    --body-color: #cbcdd4;
-    --body-inset-color: #dbdde2;
-    --display-color: #4deca0;
-    --display-color-op2: #d1e7ac;
+    --main-text-color: whitesmoke;
+    --main-font-family: 'Roboto Slab', serif;
+    --title-font-family: 'Caveat Brush', cursive;
 }
 
 /* HEADER */
 header {
     width: 100%;
-    font-family: 'Caveat Brush', cursive;
+    font-family: var(--title-font-family);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,4 +97,34 @@ header {
 @keyframes goToTop {
     0% {max-width: 100%;}
     100% {max-width: 20%;}
+}
+
+/* NAVIGATION */
+
+#navigationMenu {
+    display: flex;
+    justify-content: space-around;
+}
+
+#navigationMenu button {
+    font-family: var(--main-font-family);
+}
+
+/* MAIN */
+
+#instructions {
+    text-align: center;
+}
+
+.menuField{
+    padding: 10px;
+    border-style: solid;
+}
+
+.choices img {
+    width: 48px;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    
 }
